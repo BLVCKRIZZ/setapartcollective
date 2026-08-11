@@ -13,6 +13,9 @@ yarn-error.log*
 logs/
 *.log
 
+# Video assets
+video/
+
 # OS files
 .DS_Store
 Thumbs.db
