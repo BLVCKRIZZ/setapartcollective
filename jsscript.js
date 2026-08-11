@@ -283,17 +283,6 @@ window.addEventListener("pageshow", () => {
   updateBodyLock();
 });
 
-// Ensure the hero intro overlay is hidden immediately to avoid a persistent black banner
-document.addEventListener('DOMContentLoaded', () => {
-  try{
-    const intro = document.getElementById('heroIntro');
-    if(intro){
-      intro.classList.add('is-hidden');
-      intro.style.display = 'none';
-    }
-  }catch(e){/* ignore */}
-});
-
 
 /* ===========================
 NAVBAR SCROLL
@@ -642,43 +631,7 @@ function initCart(){
 setTimeout(initCart, 100);
 
 // Homepage typewriter intro
-function startHeroIntro(){
-  const intro = document.getElementById("heroIntro");
-  const text = document.getElementById("heroIntroText");
-
-  if(!intro || !text) return;
-
-  const message = "SET APART COLLECTIVE";
-  let index = 0;
-
-  text.textContent = "";
-  intro.classList.remove("is-hidden");
-
-  const timer = setInterval(() => {
-    text.textContent = message.slice(0, index + 1);
-    index++;
-
-    if(index >= message.length){
-      clearInterval(timer);
-      setTimeout(() => {
-        intro.classList.add("is-hidden");
-      }, 650);
-    }
-  }, 90);
-}
-
-window.addEventListener("load", () => {
-  setTimeout(startHeroIntro, 250);
-  // Failsafe: if the hero intro hasn't hidden after 7s, force-hide it
-  setTimeout(() => {
-    try{
-      const intro = document.getElementById("heroIntro");
-      if(intro && !intro.classList.contains("is-hidden")){
-        intro.classList.add("is-hidden");
-      }
-    }catch(e){/* ignore */}
-  }, 7000);
-});
+/* hero intro removed */
 
 // Quantity selector controls
 const qtyMinus = document.querySelector(".qty-minus");
