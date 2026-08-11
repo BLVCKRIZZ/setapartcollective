@@ -1,0 +1,659 @@
+/* ==========================
+   SET APART COLLECTIVE
+========================== */
+
+@font-face {
+    font-family: "TheSeasons";
+    src: url("../fonts/TheSeasons.otf");
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+ul{
+    list-style:none;
+}
+
+
+/* ==========================
+NAVBAR
+========================== */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    padding:28px 60px;
+
+    transition:.4s;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:250px;
+
+}
+
+.menu-btn{
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.menu-btn span{
+
+    width:28px;
+
+    height:2px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.nav-icons{
+
+    display:flex;
+
+    gap:24px;
+
+    align-items:center;
+
+}
+
+.nav-icons i{
+
+    font-style:normal;
+
+    cursor:pointer;
+
+    font-size:19px;
+
+}
+
+
+/* ==========================
+FULLSCREEN MENU
+========================== */
+
+.overlay-menu{
+
+    position:fixed;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100vh;
+
+    background:black;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+    transition:.5s ease;
+
+    z-index:999;
+
+}
+
+.overlay-menu.active{
+
+    left:0;
+
+}
+
+.overlay-menu a{
+
+    font-size:42px;
+
+    letter-spacing:2px;
+
+    font-family:"TheSeasons";
+
+    transition:.3s;
+
+}
+
+.overlay-menu a:hover{
+
+    opacity:.55;
+
+}
+
+
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+.hero-logo{
+
+    width:520px;
+
+    max-width:90%;
+
+}
+
+.shop-btn{
+
+    border:1px solid white;
+
+    padding:18px 80px;
+
+    letter-spacing:3px;
+
+    transition:.35s;
+
+}
+
+.shop-btn:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+
+
+/* ==========================
+COLLECTION
+========================== */
+
+.collection{
+
+    padding:120px 8%;
+
+}
+
+.collection h2{
+
+    font-family:"TheSeasons";
+
+    font-size:46px;
+
+    margin-bottom:60px;
+
+    font-weight:400;
+
+}
+
+.collection-image{
+
+    overflow:hidden;
+
+}
+
+.collection-image img{
+
+    transition:1.2s;
+
+}
+
+.collection-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* ==========================
+FEATURED
+========================== */
+
+.featured{
+
+    padding:140px 8%;
+
+}
+
+.featured-title{
+
+    margin-bottom:60px;
+
+}
+
+.featured-title h2{
+
+    font-family:"TheSeasons";
+
+    font-size:46px;
+
+    font-weight:400;
+
+}
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+.product{
+
+    color:white;
+
+}
+
+.product img{
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.product:hover img{
+
+    transform:scale(.98);
+
+}
+
+.product h3{
+
+    margin-top:18px;
+
+    font-weight:500;
+
+    font-size:17px;
+
+}
+
+.product p{
+
+    margin-top:8px;
+
+    opacity:.75;
+
+}
+
+
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+
+    padding:80px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+}
+
+.footer-logo{
+
+    font-family:"TheSeasons";
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    opacity:.55;
+
+}
+
+
+
+/* ==========================
+BUTTONS
+========================== */
+
+button{
+
+    border:none;
+
+    background:black;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ==========================
+SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:black;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#555;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#777;
+
+}
+
+
+
+/* ==========================
+SMOOTH FADE
+========================== */
+
+.hero,
+.collection,
+.featured,
+footer{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+
+
+
+/* ==========================
+TABLET
+========================== */
+
+@media(max-width:1100px){
+
+.products{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.logo img{
+
+width:210px;
+
+}
+
+.hero-logo{
+
+width:420px;
+
+}
+
+}
+
+
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:768px){
+
+header{
+
+padding:22px;
+
+}
+
+.logo img{
+
+width:170px;
+
+}
+
+.nav-icons{
+
+gap:18px;
+
+}
+
+.hero{
+
+padding:30px;
+
+}
+
+.hero-content{
+
+gap:40px;
+
+}
+
+.hero-logo{
+
+width:320px;
+
+}
+
+.shop-btn{
+
+width:220px;
+
+text-align:center;
+
+padding:16px;
+
+}
+
+.collection{
+
+padding:80px 22px;
+
+}
+
+.collection h2{
+
+font-size:34px;
+
+margin-bottom:35px;
+
+}
+
+.featured{
+
+padding:80px 22px;
+
+}
+
+.featured-title h2{
+
+font-size:34px;
+
+}
+
+.products{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+}
+
+.footer-logo{
+
+font-size:28px;
+
+}
+
+footer{
+
+padding:50px 20px;
+
+}
+
+.overlay-menu a{
+
+font-size:32px;
+
+}
+
+}
+
+
+
+/* ==========================
+SMALL MOBILE
+========================== */
+
+@media(max-width:450px){
+
+.hero-logo{
+
+width:260px;
+
+}
+
+.logo img{
+
+width:150px;
+
+}
+
+.menu-btn span{
+
+width:24px;
+
+}
+
+.shop-btn{
+
+width:180px;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.collection h2,
+.featured-title h2{
+
+font-size:28px;
+
+}
+
+.product h3{
+
+font-size:15px;
+
+}
+
+}
