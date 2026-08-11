@@ -658,6 +658,15 @@ function startHeroIntro(){
 
 window.addEventListener("load", () => {
   setTimeout(startHeroIntro, 250);
+  // Failsafe: if the hero intro hasn't hidden after 7s, force-hide it
+  setTimeout(() => {
+    try{
+      const intro = document.getElementById("heroIntro");
+      if(intro && !intro.classList.contains("is-hidden")){
+        intro.classList.add("is-hidden");
+      }
+    }catch(e){/* ignore */}
+  }, 7000);
 });
 
 // Quantity selector controls
