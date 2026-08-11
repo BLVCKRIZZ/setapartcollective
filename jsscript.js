@@ -283,6 +283,17 @@ window.addEventListener("pageshow", () => {
   updateBodyLock();
 });
 
+// Ensure the hero intro overlay is hidden immediately to avoid a persistent black banner
+document.addEventListener('DOMContentLoaded', () => {
+  try{
+    const intro = document.getElementById('heroIntro');
+    if(intro){
+      intro.classList.add('is-hidden');
+      intro.style.display = 'none';
+    }
+  }catch(e){/* ignore */}
+});
+
 
 /* ===========================
 NAVBAR SCROLL
