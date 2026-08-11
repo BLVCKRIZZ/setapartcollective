@@ -596,16 +596,26 @@ function removeFromCart(idx){
 function initCart(){
   try{
     if(bag && cart && close){
-      bag.onclick=(event)=>{
+      // Use event listeners (addEventListener) and make bag toggle the cart
+      const onBagClick = (event) => {
         event.preventDefault();
         event.stopPropagation();
-        setCartOpen(true);
+        const isActive = cart.classList.contains("active");
+        setCartOpen(!isActive);
       };
-      close.onclick=(event)=>{
+
+      const onCloseClick = (event) => {
         event.preventDefault();
         event.stopPropagation();
         setCartOpen(false);
       };
+
+      // Remove any previous listeners to avoid duplicates, then add
+      bag.removeEventListener("click", onBagClick);
+      bag.addEventListener("click", onBagClick);
+
+      close.removeEventListener("click", onCloseClick);
+      close.addEventListener("click", onCloseClick);
     }
     const addCartBtn = document.querySelector(".add-cart");
     if(addCartBtn){
