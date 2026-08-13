@@ -45,32 +45,6 @@ ul{
 NAVBAR
 ========================== */
 
-header{
-
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    padding:28px 60px;
-
-    transition:.4s;
-
-}
-
-.navbar{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
 .logo img{
 
     width:250px;
